@@ -310,6 +310,9 @@ module Jqgrid
           options << "editoptions:#{get_sub_options(couple[1])},"
         elsif couple[0] == :formoptions
           options << "formoptions:#{get_sub_options(couple[1])},"
+        elsif couple[0] == :formatoptions
+           #options << "formatoptions:{baseLinkUrl:'#{couple[1][:baseLinkUrl]}'},"
+           options << "formatoptions:#{get_sub_options(couple[1])},"
         elsif couple[0] == :searchoptions
           options << "searchoptions:#{get_sub_options(couple[1])},"
         elsif couple[0] == :editrules
