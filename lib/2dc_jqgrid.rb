@@ -4,7 +4,7 @@ module Jqgrid
     mattr_accessor :jrails_present
 
     def jqgrid_stylesheets
-      css  = stylesheet_link_tag('jqgrid/jquery-ui-1.7.1.custom.css') + "\n"
+      css  = stylesheet_link_tag('jqgrid/jquery-ui-1.8.4.custom.css') + "\n"
       css << stylesheet_link_tag('jqgrid/ui.jqgrid.css') + "\n"
     end
 
@@ -12,7 +12,7 @@ module Jqgrid
       locale = I18n.locale rescue :en
       js =  ''
       js << javascript_include_tag('jqgrid/jquery.js') + "\n" unless Jqgrid.jrails_present
-      js << javascript_include_tag('jqgrid/jquery-ui-1.7.1.custom.min.js') + "\n"
+      js << javascript_include_tag('jqgrid/jquery-ui-1.8.4.custom.min') + "\n"
       js << javascript_include_tag("jqgrid/i18n/grid.locale-#{locale}.js") + "\n"
       js << javascript_include_tag('jqgrid/jquery.jqGrid.min.js') + "\n"
     end
